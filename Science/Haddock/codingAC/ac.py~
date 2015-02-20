@@ -1,7 +1,0 @@
-def main():
-    length = input( "Enter the length: " )
-    width = input( "Enter the width: " )
-    area = length * width
-    print( "The area is " + str(area) )
-
-main()
