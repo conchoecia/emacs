@@ -2,7 +2,9 @@
 # ALIASES
 #------------
 
-alias emacs="/Applications/emacsmod.app/Contents/MacOS/Emacs -nw"
+export PATH="$HOME/anaconda/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:$PATH"
+
+alias emacs="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 alias iterm="open -a /Applications/iTerm.app"
 
 # Set CLICOLOR if you want Ansi Colors in iTerm2 
