@@ -6,6 +6,7 @@
 (split-window-horizontally)
 
 ; Open the org-mode todo list on startup
+(setq org-startup-folded nil)
 (find-file "/Users/darrin/git/Grad_Writing/org_planner/201601_todo.org")
 (other-window 1)
 (switch-to-buffer "201601_todo.org")
