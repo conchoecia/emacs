@@ -1,6 +1,15 @@
 ; Darrin's Emacs Config File
 ; Created: January 8 2013
-; Edited : December 15 2015
+; Edited : January 26 2016
+
+; Open two windows side-by side on startup
+(split-window-horizontally)
+
+; Open the org-mode todo list on startup
+(find-file "/Users/darrin/git/Grad_Writing/org_planner/201601_todo.org")
+(other-window 1)
+(switch-to-buffer "201601_todo.org")
+(other-window 1)
 
 ; Numbers
 (global-linum-mode t)
@@ -8,14 +17,15 @@
 
 ; Get evil mode working
 (package-initialize)
+(setq evil-want-C-i-jump nil)
 (evil-mode 1)
+
+;Get evil-org mode working
+(require 'evil-org)
 
 ;Tabs and Indentation
 (setq-default indent-tabs-mode nil)
 (setq tab-width 4)
-
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/ujelly-theme-1.0.10/")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/elpa/tron-theme-12/")
 
 ;Marmalade + Melpa
 (require 'package)
@@ -51,7 +61,6 @@
   (setq mac-option-modifier 'control)
   (setq set-keyboard-coding-system nil)
   )
-
 
 ;TeX mode
 (setq TeX-auto-save t)
