@@ -5,12 +5,24 @@
 ; Open two windows side-by side on startup
 (split-window-horizontally)
 
-; Open the org-mode todo list on startup
+;load this before opening the org files
+;figured out how to do this here: http://orgmode.org/manual/Clean-view.html
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(org-hide ((t (:foreground "color-234")))))
+
+; Setup variables on how to start org mode
 (setq org-startup-folded nil)
-(find-file "/Users/darrin/git/Grad_Writing/org_planner/201601_todo.org")
-(other-window 1)
-(switch-to-buffer "201601_todo.org")
-(other-window 1)
+(setq org-startup-indented t)
+(setq org-hide-leading-stars t)
+(setq org-log-done 'time)
+(setq org-log-done 'note)
+(setq org-log-into-drawer t)
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
 ; Numbers
 (global-linum-mode t)
@@ -23,6 +35,12 @@
 
 ;Get evil-org mode working
 (require 'evil-org)
+
+;open the org-mode todo list
+(find-file "/Users/darrin/git/Grad_Writing/org_planner/201601_todo.org")
+(other-window 1)
+(switch-to-buffer "201601_todo.org")
+(other-window 1)
 
 ;Tabs and Indentation
 (setq-default indent-tabs-mode nil)
@@ -125,9 +143,3 @@
      (340 . "#94BFF3")
      (360 . "#DC8CC3"))))
  '(vc-annotate-very-old-color "#DC8CC3"))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
