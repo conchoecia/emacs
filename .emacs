@@ -5,6 +5,11 @@
 ; Open two windows side-by side on startup
 (split-window-horizontally)
 
+;wc-mode
+(add-to-list 'load-path "/Users/darrin/.emacs.d/elpa/wc-mode-1.3")
+(require 'wc-mode)
+(global-set-key "\C-cw" 'wc-mode)
+
 ;load this before opening the org files
 ;figured out how to do this here: http://orgmode.org/manual/Clean-view.html
 (custom-set-faces
@@ -15,12 +20,13 @@
  '(org-hide ((t (:foreground "color-234")))))
 
 ; Setup variables on how to start org mode
-(setq org-startup-folded nil)
+(setq org-startup-folded t)
 (setq org-startup-indented t)
 (setq org-hide-leading-stars t)
 (setq org-log-done 'time)
 (setq org-log-done 'note)
-(setq org-log-into-drawer t)
+(setq org-log-into-drawer nil)
+(setq org-ellipsis "⤵")
 (setq org-todo-keywords
       '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
 
@@ -44,7 +50,7 @@
 
 ;Tabs and Indentation
 (setq-default indent-tabs-mode nil)
-(setq tab-width 4)
+(setq-default tab-width 4)
 
 ;Marmalade + Melpa
 (require 'package)
@@ -67,6 +73,8 @@
 (require 'whitespace)
 (setq whitespace-style '(face empty tabs lines-tail trailing))
 (global-whitespace-mode t)
+(setq truncate-lines t)
+(setq truncate-partial-width-windows t)
 
 ; Set up line/column mode
 (setq line-number-mode t)
