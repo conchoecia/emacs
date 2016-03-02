@@ -1,0 +1,6 @@
+/scp:dschultz@edser.ucsc.edu:/soe/dschultz/run_preqc.sh
+#_ascp_bdschultz@edser.ucsc.edu_b_asoe_adschultz_arun__preqc.sh#
+/scp:dschultz@edser.ucsc.edu:/projects/redser/projects/dschultz/analyses/fastqc_analyses/analyze_fastqc.sh
+#_ascp_bdschultz@edser.ucsc.edu_b_aprojects_aredser_aprojects_adschultz_aanalyses_afastqc__analyses_aanalyze__fastqc.sh#
+/scp:dschultz@edser.ucsc.edu:/projects/redser/projects/dschultz/analyses/fastqc_analyses/DS001-62_filenames.txt
+#_ascp_bdschultz@edser.ucsc.edu_b_aprojects_aredser_aprojects_adschultz_aanalyses_afastqc__analyses_aDS001-62__filenames.txt#
