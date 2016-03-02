@@ -6,7 +6,7 @@
 (split-window-horizontally)
 
 ;wc-mode
-(add-to-list 'load-path "/Users/darrin/.emacs.d/elpa/wc-mode-1.3")
+(add-to-list 'load-path "~/.emacs.d/elpa/wc-mode-1.3")
 (require 'wc-mode)
 (global-set-key "\C-cw" 'wc-mode)
 
@@ -43,7 +43,7 @@
 (require 'evil-org)
 
 ;open the org-mode todo list
-(find-file "/Users/darrin/git/Grad_Writing/org_planner/201601_todo.org")
+(find-file "~/git/Grad_Writing/org_planner/201601_todo.org")
 (other-window 1)
 (switch-to-buffer "201601_todo.org")
 (other-window 1)
