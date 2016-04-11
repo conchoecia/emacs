@@ -1,6 +1,28 @@
-;; -*- emacs-lisp -*- <16/02/24 10:41:09 /Users/darrin/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <16/04/07 15:29:01 /Users/darrin/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["scp" "dschultz" "udance.soe.ucsc.edu" nil nil]
-  nil))
+((["scp" "dschultz" "erenna.shore.mbari.org" nil nil]
+  ("locale" "LC_ALL=en_US.utf8")
+  ("uname" "Linux 4.2.0-16-generic")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("file-exists" "test -e")
+  ("stat" "\\stat")
+  ("id" "/usr/bin/id")
+  ("gid-string" "biolum")
+  ("gid-integer" 119)
+  ("readlink" "\\readlink")
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("git" "\\git")
+  ("~" "/home/dschultz")
+  ("uid-integer" 11347)
+  ("tmpdir" "/scp:dschultz@erenna.shore.mbari.org:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")
+  ("ls" "/bin/ls --color=never")
+  ("ls-dired" t)))

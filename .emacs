@@ -6,7 +6,7 @@
 (split-window-horizontally)
 
 ;wc-mode
-(add-to-list 'load-path "~/.emacs.d/elpa/wc-mode-1.3")
+(add-to-list 'load-path "/Users/darrin/.emacs.d/elpa/wc-mode-1.3")
 (require 'wc-mode)
 (global-set-key "\C-cw" 'wc-mode)
 
@@ -23,12 +23,19 @@
 (setq org-startup-folded t)
 (setq org-startup-indented t)
 (setq org-hide-leading-stars t)
-(setq org-log-done 'time)
-(setq org-log-done 'note)
-(setq org-log-into-drawer nil)
+;(setq org-log-done 'time)
+;(setq org-log-done 'note)
+;(setq org-log-into-drawer nil)
 (setq org-ellipsis "⤵")
-(setq org-todo-keywords
-      '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+;(setq org-todo-keywords
+;      '((sequence "TODO(t)" "WAIT(w@/!)" "|" "DONE(d!)" "CANCELED(c@)")))
+
+;setup markdown mode
+(autoload 'markdown-mode "markdown-mode"
+     "Major mode for editing Markdown files" t)
+(add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
+(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
 ; Numbers
 (global-linum-mode t)
@@ -43,9 +50,9 @@
 (require 'evil-org)
 
 ;open the org-mode todo list
-(find-file "~/git/Grad_Writing/org_planner/201601_todo.org")
+(find-file "/Users/darrin/git/Grad_Writing/org_planner/201603_todo.org")
 (other-window 1)
-(switch-to-buffer "201601_todo.org")
+(switch-to-buffer "201603_todo.org")
 (other-window 1)
 
 ;Tabs and Indentation
@@ -54,7 +61,7 @@
 
 ;Marmalade + Melpa
 (require 'package)
-(add-to-list 'package-archives 
+(add-to-list 'package-archives
     '("marmalade" .
       "http://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives
@@ -79,6 +86,10 @@
 ; Set up line/column mode
 (setq line-number-mode t)
 (setq column-number-mode t)
+
+; stop tramp from autosaving back to server
+; it can often crash emacs!
+(setq tramp-auto-save-directory "/tmp")
 
 ;; key bindings
 (when (eq system-type 'darwin) ;; mac specific settings
