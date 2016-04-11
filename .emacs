@@ -1,6 +1,6 @@
 ; Darrin's Emacs Config File
 ; Created: January 8 2013
-; Edited : January 26 2016
+; Edited : April 11 2016
 
 ; Open two windows side-by side on startup
 (split-window-horizontally)
