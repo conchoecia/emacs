@@ -100,6 +100,10 @@
   (setq set-keyboard-coding-system nil)
   )
 
+; Stop emacs from adding tabs when pasting from terminal in OS X
+; http://stackoverflow.com/questions/27736107/
+(electric-indent-mode 0)
+
 ;TeX mode
 (setq TeX-auto-save t)
 (setq TeX-parse-self t)
